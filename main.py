@@ -17,6 +17,9 @@ rotation = [90, 180, 270, 30]
 images = os.listdir(images_dir)
 masks = os.listdir(masks_dir)
 
+images.sort()
+masks.sort()
+
 for img_path, mask_path in list(zip(images, masks)):
     print(img_path, mask_path)
     imgOrig = cv2.imread(os.path.join(images_dir, img_path))
